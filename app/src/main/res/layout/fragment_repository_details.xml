@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:padding="@dimen/margin_default"
+    android:paddingTop="@dimen/row_item_margin_vertical"
+    tools:context=".presentation.main.details.RepositoryDetailsFragment">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginVertical="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="@dimen/avatar_big_size"
+        android:layout_height="@dimen/avatar_big_size"
+        android:layout_marginTop="@dimen/row_item_margin_vertical"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvRepoName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:gravity="top|start"
+        android:textAlignment="viewStart"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/text_name"
+        app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+        app:layout_constraintEnd_toStartOf="@id/ivFav"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar"
+        tools:text="Author name" />
+
+    <ImageView
+        android:id="@+id/ivFav"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginVertical="@dimen/margin_default"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/row_item_margin_vertical"
+        android:layout_marginTop="@dimen/margin_default"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvRepoStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintStart_toEndOf="@id/ivStar"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar"
+        tools:text="100" />
+
+    <ImageView
+        android:id="@+id/ivFork"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/row_item_margin_vertical"
+        android:layout_marginStart="@dimen/margin_default"
+        android:src="@drawable/ic_git_branch"
+        app:layout_constraintStart_toEndOf="@+id/tvRepoStars"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvRepoForks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintStart_toEndOf="@id/ivFork"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/tvRepoDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoForks"
+        tools:text="Sample description to understand how it looks on preview. This text does not come to production. It will be empty or be override in runtime" />
+
+
+    <TextView
+        android:id="@+id/tvLanguageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:text="@string/repo_details_language"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription" />
+
+    <TextView
+        android:id="@+id/tvLanguageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintStart_toEndOf="@id/tvLanguageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription"
+        tools:text="Android" />
+
+    <TextView
+        android:id="@+id/tvURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:autoLink="web"
+        android:textSize="@dimen/text_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguageTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

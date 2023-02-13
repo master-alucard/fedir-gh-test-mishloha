@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/navigation_main">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.fedirgithubtest.presentation.main.MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/navigate_to_navigation_details"
+            app:destination="@id/navigation_details"
+            app:popUpTo="@+id/navigation_main"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_details"
+        android:name="com.fedirgithubtest.presentation.main.details.RepositoryDetailsFragment"
+        tools:layout="@layout/fragment_repository_details">
+    </fragment>
+
+</navigation>

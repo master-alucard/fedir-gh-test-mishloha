@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.main.repositories.RepositoriesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:context=".presentation.main.repositories.RepositoriesFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout"
+            style="@style/roundOutlineTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/main_search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="textNoSuggestions"
+                android:selectAllOnFocus="true"
+                tools:text="Java" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinnerChangePeriod"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/rvContainer"
+        layout="@layout/component_repo_list" />
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:backgroundTint="@color/colorContainersBackground"
+        android:elevation="@dimen/card_elevation"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/row_item_margin_horizontal"
+            android:paddingTop="@dimen/row_item_margin_vertical"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/avatar_small_size"
+                android:layout_height="@dimen/avatar_small_size"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRepoName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_default"
+                android:gravity="bottom|start"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/titleColor"
+                android:textSize="@dimen/text_name"
+                app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
+                app:layout_constraintEnd_toStartOf="@id/ivFav"
+                app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                app:layout_constraintTop_toTopOf="@id/ivAvatar"
+                tools:text="Author name" />
+
+            <ImageView
+                android:id="@+id/ivFav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginVertical="@dimen/row_item_margin_vertical"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRepoDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:paddingTop="@dimen/row_item_margin_vertical"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/text_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+                tools:text="Sample description to understand how it looks on preview. This text does not come to production. It will be empty or be override in runtime" />
+
+            <ImageView
+                android:id="@+id/ivStar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/row_item_margin_vertical"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRepoStars"
+                app:layout_constraintEnd_toStartOf="@+id/tvRepoStars"
+                app:layout_constraintTop_toTopOf="@+id/tvRepoStars" />
+
+            <TextView
+                android:id="@+id/tvRepoStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/row_item_margin_vertical"
+                android:textSize="@dimen/text_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRepoDescription"
+                tools:text="100" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

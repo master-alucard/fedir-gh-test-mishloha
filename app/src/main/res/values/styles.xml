@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundOutlineTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/card_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/card_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/card_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/card_corner_radius</item>
+    </style>
+
+</resources>

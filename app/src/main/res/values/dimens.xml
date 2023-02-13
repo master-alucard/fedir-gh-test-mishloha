@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_item_margin_vertical">12dp</dimen>
+    <dimen name="row_item_margin_horizontal">12dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="loading_progress_bar_size">36dp</dimen>
+    <dimen name="placeholder_item_height">32dp</dimen>
+    <dimen name="avatar_small_size">48dp</dimen>
+    <dimen name="avatar_big_size">80dp</dimen>
+
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+
+    <dimen name="dropdown_elevation">4dp</dimen>
+
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="input_corner_radius">16dp</dimen>
+
+    <dimen name="text_name">24sp</dimen>
+    <dimen name="text_description">16sp</dimen>
+    <dimen name="text_error_size">24sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>
